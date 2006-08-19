@@ -22,7 +22,7 @@ our @ISA = qw(Exporter DynaLoader);
 # This allows declaration	use Win32::Process::User ':all';
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 bootstrap Win32::Process::User $VERSION;
 

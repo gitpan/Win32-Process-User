@@ -17,7 +17,7 @@ ok(1); # If we made it this far, we're ok.
 
 my $USER = Win32::Process::User->new();
 my %h = $USER->GetByPID($ARGV[0]) if $ARGV[0];
-if(!%h) { print "Error: " . $USER->GetError() . "\n"; exit; }
+if(!%h) { print " " . $USER->GetError() . "\n"; exit; }
 foreach (keys %h)
 {
 	print "$_=" . $h{$_} . "\n";
@@ -25,7 +25,7 @@ foreach (keys %h)
 
 # 0x0005d120
 %h=$USER->GetByName("hamster.exe");
-if(!%h) { print "Error: " . $USER->GetError() . "\n"; exit; }
+if(!%h) { print " " . $USER->GetError() . "\n"; exit; }
 foreach (keys %h)
 {
 	print "$_=" . $h{$_} . "\n";
